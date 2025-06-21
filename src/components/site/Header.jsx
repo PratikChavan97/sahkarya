@@ -28,7 +28,7 @@ function Header() {
         </div>
       </div>
 
-      <Navbar expand="lg" className="nav">
+      <Navbar expand="lg" className="navi">
         <NavLink to="/">
           <img src="assets/logo.svg" alt="logo" />
         </NavLink>
@@ -41,10 +41,10 @@ function Header() {
           <NavLink to="/blogs">Blogs</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <button className="donate-btn">Donate Now</button>
           <button>Be a Volunteer</button>
         </Navbar.Collapse>
       </Navbar>
+      <button className="donate-btn">Donate Now</button>
     </header>
   );
 }

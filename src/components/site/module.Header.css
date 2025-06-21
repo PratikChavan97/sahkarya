@@ -46,7 +46,7 @@
   padding: calc(0.7rem - 1px) calc(0.7rem - 1px);
 }
 
-header .nav {
+header .navi {
   background-color: #fff;
   width: 91%;
   margin: 0 auto;
@@ -58,17 +58,17 @@ header .nav {
   align-items: center;
 }
 
-.nav img {
+.navi img {
   width: 12rem;
 }
 
-.nav .nav-links {
+.navi .nav-links {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-nav .nav-links a {
+.navi .nav-links a {
   text-decoration: none;
   color: #0a0a0a;
   font-size: 1.2rem;
