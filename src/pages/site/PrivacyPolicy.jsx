@@ -3,7 +3,7 @@ import "./module.PrivacyPolicy.css";
 function PrivacyPolicy() {
   return (
     <div className="privacy">
-      <h2>Privacy Policy</h2>
+      <h2 className="page-top">Privacy Policy</h2>
       <div className="policy">
         <div>
           <b>Effective Date: [Insert Date]</b>
