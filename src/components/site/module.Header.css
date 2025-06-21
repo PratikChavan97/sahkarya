@@ -1,0 +1,90 @@
+.top {
+  background-color: #fef9c4;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 7rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact i {
+  color: #0a0a0a;
+  margin-right: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.contact span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.top .socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top .socials i {
+  color: #0a0a0a;
+  background-color: #ffd73a;
+  padding: 0.7rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+.top .socials i:hover {
+  border: 1px solid #3c002f;
+  background-color: inherit;
+  padding: calc(0.7rem - 1px) calc(0.7rem - 1px);
+}
+
+header .nav {
+  background-color: #fff;
+  width: 91%;
+  margin: 0 auto;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav img {
+  width: 12rem;
+}
+
+.nav .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+nav button {
+  background-color: #3d498d;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: 0.8rem;
+}
+
+nav button:hover {
+  border: 2px solid #3d498d;
+  background-color: inherit;
+  color: #3d498d;
+  padding: calc(1.5rem - 2px) calc(1rem - 2px);
+}
