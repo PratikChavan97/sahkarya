@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./module.Header.css";
 import { Navbar } from "react-bootstrap";
 
@@ -9,15 +9,17 @@ function Header() {
         <div className="contact">
           <div>
             <i class="fa-solid fa-location-dot"></i>
-            <span>Street Name, UK, London</span>
+            <span>Hadapsar, Pune</span>
           </div>
           <div>
             <i class="fa-solid fa-headphones"></i>
-            <span>132-456-789</span>
+            <span>7218656565 / 9763661212</span>
           </div>
           <div>
-            <i class="fa-solid fa-envelope"></i>
-            <span>admin@youdomain.com</span>
+            <Link to="mailto:sahakarya.pune@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span>sahakarya.pune@gmail.com</span>
+            </Link>
           </div>
         </div>
 
@@ -30,7 +32,13 @@ function Header() {
 
       <Navbar expand="lg" className="navi">
         <NavLink to="/">
-          <img src="assets/logo.svg" alt="logo" />
+          <img
+            src="assets/main.png"
+            alt="logo"
+            style={{
+              width: "6rem",
+            }}
+          />
         </NavLink>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -41,10 +49,14 @@ function Header() {
           <NavLink to="/blogs">Blogs</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <button>Be a Volunteer</button>
+          <NavLink to="/volunteer">Volunteer</NavLink>
+          <NavLink to="/app/admin">
+            <i class="fa-solid fa-user"></i>
+          </NavLink>
+          <button>Donate Now</button>
         </Navbar.Collapse>
       </Navbar>
-      <button className="donate-btn">Donate Now</button>
+      {/* <button className="donate-btn">Donate Now</button> */}
     </header>
   );
 }

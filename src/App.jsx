@@ -6,6 +6,9 @@ import PrivacyPolicy from "./pages/site/PrivacyPolicy";
 import TermsConditions from "./pages/site/Terms&Conditions";
 import Blogs from "./pages/site/Blogs";
 import Projects from "./pages/site/Projects";
+import AdminLayout from "./ui/AdminLayout";
+import SiteHome from "./pages/site/SiteHome";
+import Volunteer from "./components/site/Volunteer";
 
 function App() {
   const router = createBrowserRouter([
@@ -14,15 +17,15 @@ function App() {
       children: [
         {
           path: "/",
-          element: "home",
+          element: <SiteHome />,
         },
         {
           path: "/contact",
           element: <Contact />,
         },
         {
-          path: "/volunteer/sign-up",
-          element: "Volunteer",
+          path: "/volunteer",
+          element: <Volunteer />,
         },
         {
           path: "/privacy-policy",
@@ -43,6 +46,16 @@ function App() {
         {
           path: "/about",
           element: <About />,
+        },
+      ],
+    },
+    {
+      path: "/app/admin",
+      element: <AdminLayout />,
+      children: [
+        {
+          path: "home",
+          element: "Admin Home",
         },
       ],
     },

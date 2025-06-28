@@ -1,0 +1,9 @@
+.admin-nav {
+  height: 100vh;
+}
+
+.admin-nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}

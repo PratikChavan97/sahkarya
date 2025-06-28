@@ -7,7 +7,13 @@ function Footer() {
       <div className="top-footer">
         <div>
           <h3>About Sahkarya</h3>
-          <p>Description</p>
+          <img src="assets/main.png" alt="logo" />
+          <p>
+            Sahkarya is a nonprofit organization based in Pune, dedicated to
+            bridging educational gaps in underserved communities. Since our
+            inception, we have reached hundreds of children with the tools and
+            opportunities they need to thrive.
+          </p>
         </div>
         <div>
           <h3>Contact Us</h3>
@@ -23,7 +29,7 @@ function Footer() {
             ></i>
             <div>
               <h5>Address</h5>
-              <p>Street Name, London, UK</p>
+              <p>Sadesatra Nali, Hadapsar, Pune, India</p>
             </div>
           </div>
           <div className="contact">
@@ -38,7 +44,7 @@ function Footer() {
             ></i>
             <div>
               <h5>Phone</h5>
-              <p>+91 123-456-789</p>
+              <p>7218656565 / 9763661212</p>
             </div>
           </div>
           <div className="contact">
@@ -53,7 +59,7 @@ function Footer() {
             ></i>
             <div>
               <h5>Email</h5>
-              <p>admin@youdomain.com</p>
+              <p>sahakarya.pune@gmail.com</p>
             </div>
           </div>
         </div>
@@ -74,7 +80,7 @@ function Footer() {
         <div>
           <p>&copy; 2025, Sahkarya Organisation. All Rights Reserved</p>
         </div>
-        <div>
+        <div className="conditions">
           <Link to="/privacy-policy">Privacy Policy</Link>
           <Link to="/terms-and-conditions">Terms & Conditions</Link>
         </div>

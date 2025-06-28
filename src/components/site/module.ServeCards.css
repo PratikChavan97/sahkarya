@@ -1,0 +1,96 @@
+.serve {
+  width: 100%;
+  padding: 7rem 7rem 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  background-color: #f8f8f8;
+}
+
+.serve-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(206, 205, 205);
+  position: relative;
+
+  padding: 0 2rem 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  width: 30%;
+
+  transform: translate3d(1rem);
+}
+
+.serve-card i {
+  font-size: 5rem;
+  padding: 2rem;
+  border: 1px dotted black;
+  border-radius: 50%;
+
+  position: relative;
+  top: -4.7rem;
+}
+
+.serve-card h4 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  margin-top: -3rem;
+}
+
+.serve .one i {
+  background-color: #ffd6e7;
+}
+
+.serve .two i {
+  background-color: #d6ffd8;
+}
+
+.serve .three i {
+  background-color: #d6dfff;
+}
+
+.serve .one:hover {
+  background-color: #ffd6e7;
+}
+
+.serve .two:hover {
+  background-color: #d6ffd8;
+}
+
+.serve .three:hover {
+  background-color: #d6dfff;
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 1180px) {
+  .serve {
+    padding: 7rem 1rem;
+  }
+
+  .serve .serve-card:nth-child(3) {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .serve-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .serve-card {
+    width: 100%;
+  }
+
+  .serve-card:nth-child(2) {
+    margin-top: 3rem;
+  }
+}

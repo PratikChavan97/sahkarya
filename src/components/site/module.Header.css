@@ -1,6 +1,6 @@
 .top {
   background-color: #fef9c4;
-
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,13 +16,18 @@
 
 .contact i {
   color: #0a0a0a;
-  margin-right: 0.3rem;
-  font-size: 0.9rem;
+  margin-right: 0.6rem;
+  font-size: 1.1rem;
 }
 
 .contact span {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #0a0a0a;
 }
 
 .top .socials {
@@ -87,4 +92,60 @@ nav button:hover {
   background-color: inherit;
   color: #3d498d;
   padding: calc(1.5rem - 2px) calc(1rem - 2px);
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 1080px) {
+  .top {
+    padding: 0.7rem 5rem;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .top {
+    padding: 0.7rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .top .navi {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .top {
+    padding: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top .contact span {
+    display: none;
+  }
 }
