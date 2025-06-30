@@ -7,6 +7,8 @@ import Blogs from "./pages/site/Blogs";
 import About from "./pages/site/About";
 import Contact from "./pages/site/Contact";
 import Volunteer from "./pages/site/Volunteer";
+import PrivacyPolicy from "./pages/site/PrivacyPolicy";
+import TermsConditions from "./pages/site/Terms&Conditions";
 
 import AdminLayout from "./ui/AdminLayout";
 
@@ -21,6 +23,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="volunteer" element={<Volunteer />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-and-conditions" element={<TermsConditions />} />
         </Route>
 
         <Route path="/dashboard" element={<AdminLayout />}>

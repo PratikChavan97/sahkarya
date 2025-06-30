@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./module.Header.css";
 import { Navbar } from "react-bootstrap";
 
-function Header() {
+function Header({ update }) {
   return (
     <header>
       <div className="top">
@@ -53,7 +53,7 @@ function Header() {
           <NavLink to="/dashboard">
             <i className="fa-solid fa-user"></i>
           </NavLink>
-          <button>Donate Now</button>
+          <button onClick={() => update()}>Donate Now</button>
         </Navbar.Collapse>
       </Navbar>
       {/* <button className="donate-btn">Donate Now</button> */}

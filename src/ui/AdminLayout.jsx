@@ -13,7 +13,9 @@ function AdminLayout() {
       <AdminHome />
       <div className="dashboard-display d-flex">
         <AdminNavBar />
-        <Outlet className="d-flex justify-center align-middle" />
+        <div className="text-center">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
