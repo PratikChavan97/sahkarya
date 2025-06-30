@@ -1,5 +1,11 @@
 .admin-nav {
-  height: 100vh;
+  height: calc(100vh - 7rem);
+  background-color: #033e6b;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .admin-nav a {

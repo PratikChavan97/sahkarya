@@ -4,12 +4,11 @@ import "./module.AdminNavBar.css";
 function AdminNavBar() {
   return (
     <div className="admin-nav">
-      <NavLink to="">Home</NavLink>
-      <NavLink to="">Users</NavLink>
-      <NavLink to="">Queries</NavLink>
-      <NavLink to="">Pages</NavLink>
-      <NavLink to="">Gallery</NavLink>
-      {/* <NavLink to=""></NavLink> */}
+      <NavLink to="/dashboard">Home</NavLink>
+      <NavLink to="/dashboard/users">Users</NavLink>
+      <NavLink to="/dashboard/donation">Donation</NavLink>
+      <NavLink to="/dashboard/volunteers">Volunteers</NavLink>
+      <NavLink to="/dashboard/gallery">Gallery</NavLink>
     </div>
   );
 }

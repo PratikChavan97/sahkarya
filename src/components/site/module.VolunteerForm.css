@@ -1,0 +1,40 @@
+.volunteer-form {
+  width: 100%;
+}
+
+.volunteer-form-text {
+  padding: 3rem 7rem;
+}
+
+.volunteer-recruit {
+  width: 100%;
+  background-color: #ffd6e7;
+  padding: 2rem 7rem;
+}
+
+.volunteer-recruit h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.volunteer-recruit form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.volunteer-recruit form input,
+#reason {
+  width: 100%;
+  border: 2px solid black;
+  padding: 0.7rem 0 0.7rem 1rem;
+  border-radius: 0.3rem;
+}
+
+.volunteer-recruit-form-div {
+  display: flex;
+  gap: 2rem;
+}

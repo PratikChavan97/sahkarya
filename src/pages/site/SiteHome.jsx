@@ -1,7 +1,7 @@
 import CarouselHome from "../../components/site/CarouselHome";
 import ServeCards from "../../components/site/ServeCards";
-import Volunteer from "../../components/site/Volunteer";
 import WelcomeOrganisation from "../../components/site/WelcomeOrganisation";
+import AddVolunteer from "../../components/site/AddVolunteer";
 
 function SiteHome() {
   return (
@@ -9,7 +9,7 @@ function SiteHome() {
       <CarouselHome />
       <WelcomeOrganisation />
       <ServeCards />
-      <Volunteer />
+      <AddVolunteer />
     </div>
   );
 }

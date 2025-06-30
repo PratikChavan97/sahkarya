@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import "./module.Volunteer.css";
+import "./module.AddVolunteer.css";
 
-function Volunteer() {
+function AddVolunteer() {
   const navigate = useNavigate();
 
   return (
-    <div className="volunteer">
+    <div className="add-volunteer">
       <img src="assets/man-donation-boxs.webp" alt="man-dontaion-boxs" />
       <div className="volunteer-text">
         <h3>
@@ -20,4 +20,4 @@ function Volunteer() {
   );
 }
 
-export default Volunteer;
+export default AddVolunteer;

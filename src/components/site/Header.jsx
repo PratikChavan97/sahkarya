@@ -8,25 +8,25 @@ function Header() {
       <div className="top">
         <div className="contact">
           <div>
-            <i class="fa-solid fa-location-dot"></i>
+            <i className="fa-solid fa-location-dot"></i>
             <span>Hadapsar, Pune</span>
           </div>
           <div>
-            <i class="fa-solid fa-headphones"></i>
+            <i className="fa-solid fa-headphones"></i>
             <span>7218656565 / 9763661212</span>
           </div>
           <div>
             <Link to="mailto:sahakarya.pune@gmail.com">
-              <i class="fa-solid fa-envelope"></i>
+              <i className="fa-solid fa-envelope"></i>
               <span>sahakarya.pune@gmail.com</span>
             </Link>
           </div>
         </div>
 
         <div className="socials">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-linkedin-in"></i>
-          <i class="fa-brands fa-twitter"></i>
+          <i className="fa-brands fa-facebook-f"></i>
+          <i className="fa-brands fa-linkedin-in"></i>
+          <i className="fa-brands fa-twitter"></i>
         </div>
       </div>
 
@@ -50,8 +50,8 @@ function Header() {
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/volunteer">Volunteer</NavLink>
-          <NavLink to="/app/admin">
-            <i class="fa-solid fa-user"></i>
+          <NavLink to="/dashboard">
+            <i className="fa-solid fa-user"></i>
           </NavLink>
           <button>Donate Now</button>
         </Navbar.Collapse>
