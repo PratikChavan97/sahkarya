@@ -45,8 +45,8 @@ function Header({ update }) {
 
         <Navbar.Collapse className="nav-links" id="basic-navbar-nav">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/blogs">Blogs</NavLink>
+          <NavLink to="/projects">Events</NavLink>
+          <NavLink to="/blogs">Gallery</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/volunteer">Volunteer</NavLink>
