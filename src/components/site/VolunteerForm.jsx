@@ -49,32 +49,54 @@ function VolunteerForm() {
       <div className="volunteer-recruit">
         <h2>Volunteer Recruitment Form</h2>
         <form>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <div className="volunteer-recruit-form-div">
-            <input type="text" name="phone" placeholder="Your Phone" required />
+          <fieldset id="personal">
+            <legend>Personal Information</legend>
+
+            <input type="text" name="name" placeholder="Your Name" required />
+            <div className="volunteer-recruit-form-div">
+              <input
+                type="text"
+                name="phone"
+                placeholder="Your Phone"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
             <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
+              type="text"
+              name="address"
+              placeholder="Your Address"
               required
             />
-          </div>
-          <input
-            type="text"
-            name="address"
-            placeholder="Your Address"
-            required
-          />
-          <div className="volunteer-recruit-form-div">
-            <label htmlFor="birth-date">Birth Date: </label>
-            <input
-              type="date"
-              id="birth-date"
-              name="birth-date"
-              placeholder="Your Name"
-              required
-            />
-          </div>
+            <div className="volunteer-recruit-form-div">
+              <label htmlFor="birth-date">Birth Date: </label>
+              <input
+                type="date"
+                id="birth-date"
+                name="birth-date"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+          </fieldset>
+          <fieldset id="education">
+            <legend>Education & Occupation</legend>
+            <div className="education-details">
+              <div className="education"></div>
+              <div className="occupation">
+                <label htmlFor="occupation">Occupation</label>
+                <input type="radio" name="occupation" />
+                Employed
+                <input type="radio" name="occupation" />
+                Not Working
+              </div>
+            </div>
+          </fieldset>
           <label htmlFor="volunteer-certificate">
             Is Volunteer Certificate required?
           </label>

@@ -8,7 +8,7 @@
 
 .volunteer-recruit {
   width: 100%;
-  background-color: #ffd6e7;
+  background-color: #fef9c4;
   padding: 2rem 7rem;
 }
 
@@ -18,23 +18,41 @@
   margin-bottom: 2rem;
 }
 
-.volunteer-recruit form {
+.volunteer-recruit fieldset#personal {
+  /* border: 1px solid black; */
+  width: 100%;
+  padding: 2rem;
+  border-bottom: 2px dotted #f56a01;
+  /* border-radius: 3rem; */
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 1rem;
+}
+
+legend {
+  text-align: center;
+}
+
+.volunteer-recruit fieldset#personal label {
+  width: 100px;
+}
+
+#birth-date {
+  width: 300px;
 }
 
 .volunteer-recruit form input,
 #reason {
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid #f56a01;
   padding: 0.7rem 0 0.7rem 1rem;
   border-radius: 0.3rem;
 }
 
 .volunteer-recruit-form-div {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 2rem;
 }
