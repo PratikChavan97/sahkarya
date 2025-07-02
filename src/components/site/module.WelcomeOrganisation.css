@@ -78,6 +78,7 @@
   height: 12rem;
 }
 
-.welcome-btns > .active {
+.welcome-btns .active {
   color: #2d3565;
+  font-size: 1.3rem;
 }

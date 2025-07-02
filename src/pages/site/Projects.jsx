@@ -3,7 +3,7 @@ import ContactHeader from "../../components/site/ContactHeader";
 function Projects() {
   return (
     <div className="projects">
-      <ContactHeader>Our Projects</ContactHeader>
+      <ContactHeader>Our Events</ContactHeader>
     </div>
   );
 }

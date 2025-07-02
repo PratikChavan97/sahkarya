@@ -18,7 +18,7 @@ function WelcomeOrganisation() {
         <div className="welcome-story-data">
           <div className="welcome-btns">
             <button
-              className={active === "educational" ? "active" : ""}
+              className={active === "education" ? "active" : ""}
               onClick={() => setActive("education")}
             >
               Educational Facilities

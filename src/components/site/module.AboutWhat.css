@@ -1,0 +1,20 @@
+.about-what {
+  width: 100%;
+  padding: 3rem 7rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about-what .why {
+  background-color: #990000;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.about-what .what h2 {
+  color: #000066;
+}

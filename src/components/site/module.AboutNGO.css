@@ -1,0 +1,23 @@
+.about-ngo {
+  width: 100%;
+  padding: 3rem 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about-ngo h2 {
+  color: #000066;
+  text-align: center;
+}
+
+.about-ngo > div h3 {
+  font-size: 1rem;
+  color: #990000;
+}
+
+.about-ngo ul {
+  list-style: circle;
+}

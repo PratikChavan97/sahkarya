@@ -67,8 +67,8 @@ function Footer() {
           <h3>Quick Links</h3>
           <div className="quick-links">
             <Link to="/">&gt; Home</Link>
-            <Link to="/projects">&gt; Projects</Link>
-            <Link to="/blogs">&gt; Blogs</Link>
+            <Link to="/events">&gt; Events</Link>
+            <Link to="/gallery">&gt; Gallery</Link>
             <Link to="/about">&gt; About</Link>
             <Link to="/contact">&gt; Contact</Link>
             <Link to="/volunteer">&gt; Volunteer</Link>

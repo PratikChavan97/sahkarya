@@ -1,0 +1,25 @@
+.home-display {
+  width: 100%;
+  padding: 1rem;
+}
+
+.home-display h2 {
+  text-align: center;
+}
+
+.home-display .home-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  margin-top: 3rem;
+}
+
+.home-cards .home-cards-card {
+  border: 2px inset red;
+  width: 45%;
+  padding: 1rem;
+}

@@ -1,8 +1,10 @@
 import { Carousel } from "react-bootstrap";
 
+import "./module.CarouselHome.css";
+
 function CarouselHome() {
   return (
-    <Carousel fade>
+    <Carousel fade className="carousel-home">
       <Carousel.Item>
         <img src="assets/demo-1.webp" alt="carousel-1" />
         <Carousel.Caption>
@@ -10,14 +12,16 @@ function CarouselHome() {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img src="assets/demo-2.webp" alt="carousel-2" />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+      <Carousel.Item className="carousel-items">
+        <div className="carousel-text">
+          <h4>Education brings prosperity</h4>
+        </div>
+        <div className="carousel-image">
+          <img src="assets/demo-3.webp" alt="carousel-2" />
+        </div>
       </Carousel.Item>
+
       <Carousel.Item>
         <img src="assets/demo-3.webp" alt="carousel-3" />
 

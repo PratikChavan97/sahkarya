@@ -11,6 +11,11 @@ import PrivacyPolicy from "./pages/site/PrivacyPolicy";
 import TermsConditions from "./pages/site/Terms&Conditions";
 
 import AdminLayout from "./ui/AdminLayout";
+import AdminHomeDisplay from "./components/admin/AdminHomeDisplay";
+import AdminUsers from "./pages/admin/AdminUsers";
+import AdminVolunteer from "./pages/admin/AdminVolunteer";
+import AdminDonation from "./pages/admin/AdminDonation";
+import UserAddForm from "./components/admin/UserAddForm";
 
 function App() {
   return (
@@ -18,8 +23,8 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index path="/" element={<SiteHome />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="blogs" element={<Blogs />} />
+          <Route path="events" element={<Projects />} />
+          <Route path="gallery" element={<Blogs />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="volunteer" element={<Volunteer />} />
@@ -28,10 +33,11 @@ function App() {
         </Route>
 
         <Route path="/dashboard" element={<AdminLayout />}>
-          <Route index element="Hello" />
-          <Route path="users" element="Users" />
-          <Route path="volunteers" element="Volunteers" />
-          <Route path="donation" element="Donation" />
+          <Route index element={<AdminHomeDisplay />} />
+          <Route path="users" element={<AdminUsers />} />
+          <Route path="users/add-form" element={<UserAddForm />} />
+          <Route path="volunteers" element={<AdminVolunteer />} />
+          <Route path="donation" element={<AdminDonation />} />
         </Route>
 
         <Route path="*" element="Page Not Found" />

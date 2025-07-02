@@ -18,15 +18,15 @@ function AdminHeader() {
       </div>
       <div className="admin-header-right">
         <p>
-          <i class="fa-solid fa-clock"></i> {time}
+          <i className="fa-solid fa-clock"></i> {time}
         </p>
         <p>
-          <i class="fa-solid fa-user-tie"></i>{" "}
-          <i class="fa-solid fa-caret-down"></i>
-          <div>
+          <i className="fa-solid fa-user-tie"></i>{" "}
+          <i className="fa-solid fa-caret-down"></i>
+          {/* <div>
             <p>Profile</p>
             <p>Logout</p>
-          </div>
+          </div> */}
         </p>
       </div>
     </div>

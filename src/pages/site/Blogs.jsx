@@ -3,7 +3,7 @@ import ContactHeader from "../../components/site/ContactHeader";
 function Blogs() {
   return (
     <div className="blogs">
-      <ContactHeader>Blogs</ContactHeader>
+      <ContactHeader>Gallery</ContactHeader>
     </div>
   );
 }
