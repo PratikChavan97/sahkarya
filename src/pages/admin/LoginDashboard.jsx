@@ -60,7 +60,7 @@ function LoginDashboard({ authenticate, setUser }) {
         />
         <button onClick={(e) => handleSubmit(e)}>Login</button>
       </form>
-      <button onClick={() => navigate(-1)}>&larr; Back</button>
+      <button onClick={() => navigate("/")}>&larr; Back</button>
     </div>
   );
 }

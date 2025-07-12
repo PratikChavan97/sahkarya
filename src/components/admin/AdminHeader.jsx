@@ -14,9 +14,9 @@ function AdminHeader({ authenticate }) {
   }, []);
 
   function handleLogout() {
+    navigate("/logout");
     authenticate(false);
     localStorage.clear();
-    navigate("/logout");
   }
 
   return (
