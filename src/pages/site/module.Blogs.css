@@ -1,0 +1,12 @@
+.blogs-gallery {
+  padding: 3rem 7rem;
+}
+
+.blogs h3:first-of-type {
+  padding-top: 3rem;
+  padding-left: 7rem;
+}
+
+.blogs h3:last-of-type {
+  padding: 0 7rem;
+}
