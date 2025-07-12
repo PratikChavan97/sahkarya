@@ -33,6 +33,12 @@ function CarouselHome() {
         <div className="item">
           <img src="assets/carousel-2.png" alt="carousel-2" />
         </div>
+        <div className="item">
+          <img src="assets/carousel-3.jpg" alt="carousel-3" />
+        </div>
+        <div className="item last">
+          <img src="assets/carousel-4.jpg" alt="carousel-4" />
+        </div>
       </OwlCarousel>
     </div>
   );

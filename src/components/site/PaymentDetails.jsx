@@ -40,7 +40,7 @@ function PaymentDetails() {
           </button>
         </div>
         <div className="qr-details">
-          <img src="assets/qr-payment.jpg" alt="qr" />
+          <img src="assets/qr-payment.png" alt="qr" />
         </div>
       </div>
       {display && (

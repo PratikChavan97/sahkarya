@@ -11,8 +11,16 @@ function Footer() {
           <p>
             Sahkarya Eduactional & Social Foundation is a nonprofit organization
             based in Pune, dedicated to bridging educational gaps in underserved
-            communities. Since our inception, we have reached hundreds of
-            children with the tools and opportunities they need to thrive.
+            communities.
+          </p>
+          <p
+            style={{
+              fontSize: "0.8rem",
+            }}
+          >
+            <strong>Regd. No. MH1111/2012, Pune | 40387 (P)</strong>
+            <br />
+            12A No. ABDTS6760MF20231/80G No.ABDTS6760MF2023101
           </p>
         </div>
         <div>

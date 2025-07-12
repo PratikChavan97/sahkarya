@@ -10,3 +10,13 @@
 .blogs h3:last-of-type {
   padding: 0 7rem;
 }
+
+.carousel-home .item {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-home .last {
+  width: 50%;
+  height: 100vh;
+}
