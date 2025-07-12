@@ -1,0 +1,41 @@
+.user-add {
+  width: 100%;
+  padding: 2rem 3rem;
+  text-align: center;
+  /* height: 90vh; */
+}
+
+.user-add h2 {
+  margin-bottom: 2rem;
+}
+
+.user-add form {
+  background-color: #bed9e7;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 3rem 1rem;
+  border-radius: 1rem;
+}
+
+.user-add form input {
+  width: 80%;
+  padding: 0.3rem;
+  border: 2px solid #2d3565;
+  border-radius: 0.3rem;
+  color: black;
+}
+
+.user-add form button {
+  background-color: #033e6b;
+  color: #fff;
+  padding: 0.3rem 2rem;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}

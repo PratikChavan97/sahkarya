@@ -1,0 +1,64 @@
+@media screen and (max-width: 400px) {
+  .top {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .policy {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  /* universal index.css */
+
+  .page-top {
+    font-size: 1.2rem;
+  }
+
+  header .top {
+    display: none;
+  }
+
+  header .navi {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navi .nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  footer .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Privacy Policy & Terms and Conditions */
+
+  .privacy h2 {
+    /* font-size: 1.5rem; */
+  }
+
+  .privacy .policy {
+    padding: 1rem;
+    /* font-size: 3rem; */
+  }
+
+  .privacy .policy ol {
+    margin-left: -2.3rem;
+  }
+
+  .privacy .policy ul {
+    margin-left: 0.5rem;
+  }
+}

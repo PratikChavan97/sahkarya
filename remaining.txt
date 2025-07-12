@@ -1,0 +1,48 @@
+ /* Site */
+
+1. Carousel placement
+2. Navbar placement - done
+3. Donate Form - done
+4. Add two Quotes in Home Page  - done
+5. Volunteer form - Done
+6. Make all forms a controlled elements - Done
+
+
+ /* Dashboard */
+ 1. User, Donation, Volunteer, getAll, create, View and Update
+ 2. Images upload
+ 3. Authentication
+ 4. Dashboard layouting
+ 5. Payment
+ 6. Email
+
+ { CHeck for mobile responsiveness}
+
+ ====================================================================
+
+ $ Checking Remaining works again:
+
+ 1] Frontend:
+
+ 2] Backend:
+    Total API requests:
+    - Users:
+        - getAll to display in users page in table format
+        - getOne to give access and permissions to dashboard
+
+ 3] API:
+
+ ====================================================================
+
+ Date: 11-07-25
+
+ Final Requirements and Updates before deployment:
+
+ 1] UI:
+    1) Add Carousel with Provided images * 3.
+    2) Donor form: select money for both fields => Done
+    3) Bank details, QR "payment page" => Done
+    4) 
+
+ 2] Form fields:
+    1) remove photos

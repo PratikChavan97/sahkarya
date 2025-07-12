@@ -1,0 +1,85 @@
+.welcome {
+  width: 100%;
+  padding: 3rem 7rem;
+  margin-bottom: 5rem;
+}
+
+.welcome-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.welcome-intro img {
+  display: block;
+  margin: 0 auto;
+  height: 7rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-intro h2 {
+  color: #2d3565;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: -0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-story {
+  position: relative;
+  margin-top: 7rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.welcome-story img {
+  height: 25rem;
+}
+
+.welcome-story-imgs,
+.welcome-story-data {
+  width: 50%;
+}
+
+.welcome-img-bg {
+  height: 35rem;
+  width: 35rem;
+  border-radius: 50%;
+  background-color: #ffd73a;
+  position: absolute;
+  z-index: -1;
+  top: -4rem;
+}
+
+.welcome-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+
+  margin-bottom: 2rem;
+}
+
+.welcome-btns button {
+  font-weight: 500;
+  border-bottom: 5px solid #2d3565;
+}
+
+.welcome-story-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 2rem;
+}
+
+.welcome-story-footer img {
+  height: 12rem;
+}
+
+.welcome-btns .active {
+  color: #2d3565;
+  font-size: 1.3rem;
+}

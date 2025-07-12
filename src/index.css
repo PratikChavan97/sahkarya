@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --dark-bg: #033e6b;
+  --neutral-white: #fff;
+
+  --button-bg: #f7941d;
+  --button-bg-hover: #e67e00;
+
+  --text: #333333;
+  --even-section: #e6f2fa;
+  --odd-section: #fff4e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fef9c4;
+  /* height: 100vh;
+  width: 100%; */
+}
+
+header,
+footer {
+  width: 100%;
+}
+
+hr {
+  width: 100%;
+  height: 5px;
+}
+
+.page-top {
+  background-color: #fef9c4;
+  padding: 2rem;
+}
+
+.donate-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 38%;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  background-color: #3c002f;
+  color: #fff;
+}
+
+.donate-btn:hover {
+  border: 1px solid #3c002f;
+  background-color: #fff;
+  color: #3c002f;
+  padding: calc(0.5rem - 1px) calc(1rem - 1px);
+}
+
+.contact-section {
+  /* padding: 1rem 7rem; */
+}
+
+.contact-section .touch {
+  background-color: #fff;
+  padding: 4rem 7rem;
+  text-align: center;
+}
+
+.contact-section .touch h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.contact-section .touch > p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0.8rem;
+}
+
+.touch .touch-cards {
+  padding: 4rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.touch-cards .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-section h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-section .contact-form {
+  width: 100%;
+  padding: 4rem 7rem;
+  background-color: #fff;
+}
+.contact-section form {
+  margin: 1rem auto;
+  background-color: #fff;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+  border: 1px solid gray;
+  width: 100%;
+  padding: 0.8rem 0.5rem 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.contact-section form button {
+  text-transform: uppercase;
+  background-color: #f56a01;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.8rem 3rem;
+  border-radius: 2rem;
+}

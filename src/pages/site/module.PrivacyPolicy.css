@@ -1,0 +1,46 @@
+.privacy h2 {
+  text-align: center;
+  /* padding: 4rem 0; */
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.policy {
+  width: 100%;
+  padding: 3rem 7rem;
+  background-color: #fff;
+}
+
+.policy ol {
+  list-style-type: "1";
+  /* padding: 3rem 4rem; */
+}
+
+.policy ul {
+  list-style-type: circle;
+  margin-left: 2rem;
+  padding: 0.5rem;
+}
+
+.policy .insider {
+  list-style-type: disc;
+}
+
+.policy ol li h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.policy ul li h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.policy .lists {
+  padding: 3rem 2rem;
+}
+
+.lists ol li p {
+  margin-bottom: 1rem;
+}

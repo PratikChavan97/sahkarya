@@ -1,0 +1,15 @@
+.quote {
+  width: 100%;
+  padding: 3rem 17rem;
+  background-color: #2d3565;
+}
+
+.quote h3 {
+  color: #dfdfdf;
+}
+
+.quote h4 {
+  color: #ffd73a;
+  text-align: right;
+  margin-right: 7rem;
+}
