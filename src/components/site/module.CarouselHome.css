@@ -1,6 +1,12 @@
 .carousel-home {
   background-color: #2d3565;
-  padding: 3rem 7rem;
+  padding: 1rem 4rem;
+}
+
+.carousel-home img {
+  height: 100vh;
+  display: block;
+  margin: 0 auto;
 }
 
 /* .carousel-items {

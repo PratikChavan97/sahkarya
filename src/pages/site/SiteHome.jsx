@@ -8,7 +8,7 @@ import Quote from "../../components/site/Quote";
 function SiteHome() {
   return (
     <div className="home">
-      {/* <CarouselHome /> */}
+      <CarouselHome />
       <WelcomeOrganisation />
       <Quote name="Ralph Waldo Emerson">
         "To know even one life has breathed easier because you have lived, that
@@ -19,7 +19,7 @@ function SiteHome() {
         "The best way to find yourself is to lose yourself in the service of
         others."
       </Quote>
-      {/* <Doners /> */}
+      <Doners />
       <AddVolunteer />
     </div>
   );
