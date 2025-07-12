@@ -15,17 +15,16 @@ function Contact() {
           <div className="cards">
             <img src="assets/contact-tel.webp" alt="contact-tel" />
             <div>
-              <p>Tel: 123465798</p>
-              <p>Whatsapp: 123465798</p>
+              <p>Tel: 7218656565 / 9763661212</p>
             </div>
           </div>
           <div className="cards">
             <img src="assets/contact-map.webp" alt="contact-map" />
-            <p>Marmora Road New York City, New York, USA</p>
+            <p>Sadesatra Nali, Hadapsar</p>
           </div>
           <div className="cards">
             <img src="assets/contact-mail.webp" alt="contact-mail" />
-            <p>Need assistance? Check out our Help Center.</p>
+            <p>Need assistance? Connect with us</p>
           </div>
         </div>
       </div>
