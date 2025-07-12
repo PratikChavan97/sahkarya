@@ -25,7 +25,7 @@ function AdminHomeDisplay({ user }) {
   });
   return (
     <div className="home-display">
-      <h2>Welcome, {user.name}</h2>
+      <h2>Welcome, {user?.name}</h2>
 
       <div className="home-cards">
         <div className="home-cards-card">

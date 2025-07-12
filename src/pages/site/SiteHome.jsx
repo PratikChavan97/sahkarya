@@ -19,7 +19,7 @@ function SiteHome() {
         "The best way to find yourself is to lose yourself in the service of
         others."
       </Quote>
-      <Doners />
+      {/* <Doners /> */}
       <AddVolunteer />
     </div>
   );

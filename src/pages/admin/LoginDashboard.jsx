@@ -24,6 +24,7 @@ function LoginDashboard({ authenticate, setUser }) {
             setUser(res.data.user);
             navigate("/dashboard");
             localStorage.setItem("keepLogged", true);
+            localStorage.setItem("user", res.data.user);
           }
         }
       } catch (err) {

@@ -7,7 +7,7 @@ function ProtectedRoute({ isAuthenticated }) {
 
   useEffect(() => {
     if (!isAuthenticated) navigate("/login");
-  });
+  }, [isAuthenticated, navigate]);
   return (
     <>
       <Outlet />
