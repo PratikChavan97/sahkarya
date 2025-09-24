@@ -25,10 +25,11 @@ function AboutWhat() {
         </p>
 
         <p>
-          Udaan aims at changing these statistics by providing children from
-          low-income communities the academic and non-academic support that will
-          enable them to stay and succeed in school and realize their true
-          potential through continuous learning.{" "}
+          Sahkarya Educational & Social Foundation aims at changing these
+          statistics by providing children from low-income communities the
+          academic and non-academic support that will enable them to stay and
+          succeed in school and realize their true potential through continuous
+          learning.{" "}
         </p>
       </div>
     </div>

@@ -21,3 +21,18 @@
 .about-ngo ul {
   list-style: circle;
 }
+
+/* Responsive width: 0 to 446px */
+
+@media screen and (max-width: 445px) {
+  .about-ngo {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .about-ngo > img {
+    height: 10rem;
+    display: block;
+    margin: 0 auto;
+  }
+}

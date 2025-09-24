@@ -4,9 +4,13 @@
 }
 
 .carousel-home img {
-  height: 100vh;
+  /* height: 100vh; */
   display: block;
   margin: 0 auto;
+}
+
+.carousel-home .item {
+  height: min-content;
 }
 
 /* .carousel-items {
@@ -16,3 +20,17 @@
   justify-content: space-between;
   align-items: center;
 } */
+
+/* Responsive width: 0 to 446px */
+
+@media screen and (max-width: 446px) {
+  .carousel-home {
+    padding: 1rem;
+    /* height: min-content; */
+  }
+
+  .carousel-home img {
+    /* width: 100%; */
+    height: 100%;
+  }
+}

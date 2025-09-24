@@ -83,3 +83,61 @@
   color: #2d3565;
   font-size: 1.3rem;
 }
+
+/* Responsive width: 0 to 446px */
+
+@media screen and (max-width: 446px) {
+  .welcome {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .welcome .welcome-intro > h2 {
+    font-size: 1.3rem;
+  }
+
+  .welcome .welcome-story {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .welcome-story-imgs {
+    margin-bottom: 4rem;
+  }
+
+  .welcome-story-imgs img {
+    height: 15rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .welcome-story-imgs,
+  .welcome-story-data {
+    width: 100%;
+  }
+
+  .welcome-img-bg {
+    height: 20rem;
+    width: 20rem;
+    /* transform: translate(-50%, -50%); */
+    top: -1rem;
+    left: 2rem;
+  }
+
+  .welcome-btns {
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 0; */
+  }
+
+  .welcome .welcome-story-footer {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .welcome .welcome-story-footer > img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

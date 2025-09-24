@@ -13,3 +13,18 @@
   text-align: right;
   margin-right: 7rem;
 }
+
+@media screen and (max-width: 446px) {
+  .quote {
+    padding: 1rem 1.3rem;
+  }
+
+  .quote h3 {
+    font-size: 1.3rem;
+  }
+
+  .quote h4 {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+}

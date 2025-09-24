@@ -46,12 +46,13 @@
 /* Responsive CSS */
 
 @media screen and (max-width: 1230px) {
-  .volunteer {
+  .add-volunteer {
     display: flex;
+    flex-direction: column;
   }
 
-  .volunteer img {
-    width: 49%;
+  .add-volunteer img {
+    width: 70%;
   }
 }
 
@@ -85,16 +86,23 @@
   }
 }
 
-@media screen and (max-width: 510px) {
-  .volunteer {
-    padding: 1rem 1rem 2rem 1rem;
+@media screen and (max-width: 446px) {
+  .add-volunteer {
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    /* padding: 1rem 1rem 2rem 1rem; */
+  }
+
+  .add-volunteer img {
+    width: 60%;
+  }
+
+  .volunteer-text h3 {
+    font-size: 1.3rem;
   }
 
   .volunteer img {
-    width: 100%;
-  }
-
-  .volunteer-text {
     width: 100%;
   }
 }
