@@ -44,3 +44,20 @@
 .lists ol li p {
   margin-bottom: 1rem;
 }
+
+/* Responsive for device width: 0 to 465px */
+
+@media screen and (max-width: 446px) {
+  .policy {
+    padding: 1rem 0.8rem;
+  }
+
+  .policy > div > p {
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+  }
+
+  .policy .lists > ol {
+    padding: 0;
+  }
+}

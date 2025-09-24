@@ -4,9 +4,9 @@ function TermsConditions() {
       <h2 className="page-top">Terms & Conditions</h2>
       <div className="policy">
         <div>
-          <b>Effective Date: [Insert Date]</b>
+          <b>Effective Date: 01/01/2012</b>
           <br />
-          <b>Organization Name: Sahkarya</b>
+          <b>Organization Name: Sahkarya Educational and Social Organization</b>
           <br />
           <b>Location: Pune, Maharashtra, India</b>
           <br />
@@ -151,10 +151,11 @@ function TermsConditions() {
                 or how your data is handled, please contact:
               </p>
               <p>
-                Sahkarya <br />
-                [Insert Office Address if any] <br /> Pune, Maharashtra, India{" "}
-                <br />
-                Email: [Insert NGO Email] <br /> Phone: [Insert Contact Number]
+                Sahkarya Educational & Social Foundation <br />
+                Sadesatra Nali, Hadapsar, Pune, India <br /> Pune, Maharashtra,
+                India <br />
+                Email: sahkarya.pune@gmail.com <br /> Phone: 7218656565 /
+                9763661212
               </p>
             </li>
           </ol>

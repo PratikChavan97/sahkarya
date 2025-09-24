@@ -165,10 +165,11 @@ function PrivacyPolicy() {
                 or how your data is handled, please contact:
               </p>
               <p>
-                Sahkarya <br />
-                [Insert Office Address if any] <br /> Pune, Maharashtra, India{" "}
-                <br />
-                Email: [Insert NGO Email] <br /> Phone: [Insert Contact Number]
+                Sahkarya Educational & Social Foundation <br />
+                Sadesatra Nali, Hadapsar, Pune, India <br /> Pune, Maharashtra,
+                India <br />
+                Email: sahkarya.pune@gmail.com <br /> Phone: 7218656565 /
+                9763661212
               </p>
             </li>
           </ol>
