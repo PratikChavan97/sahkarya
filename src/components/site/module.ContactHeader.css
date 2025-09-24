@@ -5,8 +5,9 @@
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
+  /* background-color: #fff; */
 }
 
-.contact-header h2 {
+.contact-header > h2 {
   font-size: 2.5rem;
 }

@@ -1,48 +1,33 @@
- /* Site */
+FRONTEND:
+1) Website responsive.
+2) Dashboard responsive.
 
-1. Carousel placement
-2. Navbar placement - done
-3. Donate Form - done
-4. Add two Quotes in Home Page  - done
-5. Volunteer form - Done
-6. Make all forms a controlled elements - Done
+Data:
+1) HomePage:
+   * Fetch:
+   -  recent donars: format(name, location)
+   - display in carousel cards.
+   - change hero section images
 
+2) Events: 
+   - change bg of Events heading
+   - fetch Events: format(event name, date, location, 1 image as card-image, description)
 
- /* Dashboard */
- 1. User, Donation, Volunteer, getAll, create, View and Update
- 2. Images upload
- 3. Authentication
- 4. Dashboard layouting
- 5. Payment
- 6. Email
+3) Gallery:
+   - fetch images from different years and show them in carousel
 
- { CHeck for mobile responsiveness}
+4) Contact:
+   - Send form data as a query, visible in admin panel: format(name, email, phone, query)
+   - take query submit button to center - DONE
 
- ====================================================================
+5) Volunteer:
+   - send volunteer recruitment form, format(name, phone, email, address, dob, occupation, isCertificateRequired, duration, reason to join)
 
- $ Checking Remaining works again:
+6) Donation requests:
+   - send form data: format(name, email, phone, amount/description)
 
- 1] Frontend:
+BACKEND:
+1) Images upload from gallery page only.
+2) At first, all the members gets added as "member". Later, admin can set them according roles.
+3)
 
- 2] Backend:
-    Total API requests:
-    - Users:
-        - getAll to display in users page in table format
-        - getOne to give access and permissions to dashboard
-
- 3] API:
-
- ====================================================================
-
- Date: 11-07-25
-
- Final Requirements and Updates before deployment:
-
- 1] UI:
-    1) Add Carousel with Provided images * 3.
-    2) Donor form: select money for both fields => Done
-    3) Bank details, QR "payment page" => Done
-    4) 
-
- 2] Form fields:
-    1) remove photos

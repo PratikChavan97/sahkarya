@@ -1,12 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
-import "./module.Header.css";
 import { useState } from "react";
+
+import "./module.Header.css";
 
 function Header({ update }) {
   const [visible, setVisible] = useState();
 
   return (
-    <>
+    <div className="header">
       <header>
         <div className="top">
           <div className="contact">
@@ -87,7 +88,7 @@ function Header({ update }) {
           </nav>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
