@@ -110,7 +110,7 @@ nav .fa-bars {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 30vw;
+  width: 50%;
   background-color: #2d3565;
   color: #fff;
   z-index: 10;
@@ -119,7 +119,7 @@ nav .fa-bars {
 .floating-nav-left .toggle-visible {
   position: absolute;
   top: 1rem;
-  right: 2rem;
+  right: 1rem;
 }
 
 .floating-nav-left .floating-nav {
@@ -167,7 +167,7 @@ nav .fa-bars {
   }
 
   header .navi {
-    width: 90%;
+    width: 95%;
   }
 
   .navi .nav-links,

@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./module.Header.css";
 
 function Header({ update }) {
-  const [visible, setVisible] = useState();
+  const [visible, setVisible] = useState(false);
 
   return (
     <div className="header">
@@ -67,7 +67,7 @@ function Header({ update }) {
             className="toggle-visible"
             onClick={() => setVisible((visible) => !visible)}
           >
-            X
+            <i class="fa-solid fa-xmark"></i>
           </button>
 
           <nav className="floating-nav">
