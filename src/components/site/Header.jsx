@@ -40,7 +40,9 @@ function Header({ update }) {
           </div>
           <div className="nav-links">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/events">Events</NavLink>
+            <NavLink to="/events" className="nav-events">
+              Events
+            </NavLink>
             <NavLink to="/gallery">Gallery</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contact</NavLink>

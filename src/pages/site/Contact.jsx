@@ -1,6 +1,18 @@
+import { useState } from "react";
 import ContactHeader from "../../components/site/ContactHeader";
 
 function Contact() {
+  const [queryDetails, setQueryDetails] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    query: "",
+  });
+
+  function handleQuerySubmit() {
+    console.log(queryDetails);
+  }
+
   return (
     <div className="contact-section">
       <ContactHeader>Contact Us</ContactHeader>
@@ -33,12 +45,43 @@ function Contact() {
       <div className="contact-form">
         <h3>Have any Question?</h3>
         <form>
-          <input type="text" name="name" placeholder="Your Name" />
-          <input type="email" name="email" placeholder="Your Email" />
-          <input type="text" name="phone" placeholder="Your Phone" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={queryDetails.name}
+            onChange={(e) =>
+              setQueryDetails({ ...queryDetails, name: e.target.value })
+            }
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={queryDetails.email}
+            onChange={(e) =>
+              setQueryDetails({ ...queryDetails, email: e.target.value })
+            }
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Your Phone"
+            value={queryDetails.phone}
+            onChange={(e) =>
+              setQueryDetails({ ...queryDetails, phone: e.target.value })
+            }
+          />
 
-          <textarea rows="5" placeholder="Your Query"></textarea>
-          <button>Submit</button>
+          <textarea
+            rows="5"
+            placeholder="Your Query"
+            value={queryDetails.query}
+            onChange={(e) =>
+              setQueryDetails({ ...queryDetails, query: e.target.value })
+            }
+          ></textarea>
+          <button onClick={handleQuerySubmit}>Submit</button>
         </form>
       </div>
     </div>

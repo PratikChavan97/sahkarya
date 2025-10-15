@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import "./module.DonateNow.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
+import "./module.DonateNow.css";
 
 function DonateNow({ donate, update }) {
   const [donor, setDonor] = useState({
@@ -119,7 +120,7 @@ function DonateNow({ donate, update }) {
             </button>
           </form>
           <button className="donate-close" onClick={() => update()}>
-            X
+            <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
       )}
