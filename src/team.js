@@ -91,7 +91,7 @@ const teams = [
   },
   {
     photourl: "assets/team/monu_taktode.jpg",
-    name: "Monu Takade",
+    name: "Monu Taktode",
     gender: "male",
   },
 ];

@@ -9,10 +9,7 @@ function VolunteerForm() {
     email: "",
     address: "",
     dob: "",
-    occupation: "",
-    isCertificate: false,
     duration: "",
-    reason: "",
   });
 
   function handleVolunteerSubmit(e) {
@@ -23,10 +20,8 @@ function VolunteerForm() {
       phone: "",
       email: "",
       dob: "",
-      occupation: "",
-      isCertificate: false,
-      reason: "",
       duration: "",
+      address: "",
     });
 
     console.log(volunteer);
@@ -137,77 +132,39 @@ function VolunteerForm() {
                 }
                 required
               />
-            </div>
-          </fieldset>
-          <fieldset id="education">
-            <legend>Education & Occupation</legend>
-            <div className="education-details">
-              <div className="occupation">
-                <label htmlFor="occupation">Occupation</label>
-                <input
-                  type="text"
-                  placeholder="Your Occupation"
-                  value={volunteer.occupation}
-                  onChange={(e) =>
-                    setVolunteer({ ...volunteer, occupation: e.target.value })
-                  }
-                />
-              </div>
-            </div>
-          </fieldset>
-          <div className="form-options">
-            <div>
-              <label htmlFor="volunteer-certificate">
-                Is Volunteer Certificate required?
-              </label>
-              <p>
-                Certificate will be provided only after completion of 30 hours
-                of volunteering services.
-              </p>
-            </div>
-            <select
-              value={volunteer.isCertificate}
-              onChange={(e) =>
-                setVolunteer({
-                  ...volunteer,
-                  isCertificate: e.target.value === "Yes" ? true : false,
-                })
-              }
-            >
-              <option value="">-- Select from below options --</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
 
-            <label>Volunteer Duration</label>
-            <select
-              value={volunteer.duration}
-              onChange={(e) =>
-                setVolunteer({ ...volunteer, duration: e.target.value })
-              }
-            >
-              <option value="">-- Select from below options</option>
-              <option value="1Week">1 Week</option>
-              <option value="1Month">1 Month</option>
-              <option value="1Month-3Month">1 Month - 3 Months</option>
-              <option value="<6Month">Less than 6 Months</option>
-            </select>
+              <label>Volunteer Duration</label>
+              <select
+                value={volunteer.duration}
+                onChange={(e) =>
+                  setVolunteer({ ...volunteer, duration: e.target.value })
+                }
+                required
+              >
+                <option value="">-- Select from below options</option>
+                <option value="1Week">1 Week</option>
+                <option value="1Month">1 Month</option>
+                <option value="1Month-3Month">1 Month - 3 Months</option>
+                <option value="<6Month">Less than 6 Months</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <p
+            style={{
+              color: "red",
+              fontSize: "0.7rem",
+            }}
+          >
+            * Certificate will be provided only after completion of 48 hours of
+            volunteering services.
+          </p>
+
+          <div className="volunteer-submit">
+            <button onClick={(e) => handleVolunteerSubmit(e)}>
+              Send Response
+            </button>
           </div>
-
-          <label htmlFor="reason">
-            Why do you wish to volunteer for Sahakarya?
-          </label>
-          <textarea
-            id="reason"
-            placeholder="Your opinion..."
-            value={volunteer.reason}
-            onChange={(e) =>
-              setVolunteer({ ...volunteer, reason: e.target.value })
-            }
-          ></textarea>
-          <button onClick={(e) => handleVolunteerSubmit(e)}>
-            Send Response
-          </button>
         </form>
       </div>
     </div>
