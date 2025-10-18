@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import "./module.VolunteerForm.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import capitalize from "../../services/Capitalize";
+import lowercase from "../../services/lowercase";
+import axios from "axios";
 
 function VolunteerForm() {
   const [volunteer, setVolunteer] = useState({
@@ -10,10 +13,17 @@ function VolunteerForm() {
     address: "",
     dob: "",
     duration: "",
+    isAnswered: false,
   });
+  const [submit, setSubmit] = useState(false);
 
   function handleVolunteerSubmit(e) {
     e.preventDefault();
+
+    const { name, phone, email, address, dob, duration } = volunteer;
+
+    if (!name || !phone || !email || !dob || !address || !duration)
+      return alert("Please provide required information");
 
     setVolunteer({
       name: "",
@@ -23,9 +33,23 @@ function VolunteerForm() {
       duration: "",
       address: "",
     });
+    setSubmit((submit) => !submit);
 
     console.log(volunteer);
   }
+
+  useEffect(() => {
+    async function submitVolunteer() {
+      try {
+        if (submit) {
+          await axios.post("http://localhost:8000/api/v1/volunteer", volunteer);
+        }
+      } catch (err) {
+        if (err) console.log("Cannot submit your volunteer request");
+      }
+    }
+    submitVolunteer();
+  }, [submit, volunteer]);
 
   return (
     <div className="volunteer-form">
@@ -83,7 +107,7 @@ function VolunteerForm() {
               placeholder="Your Name"
               value={volunteer.name}
               onChange={(e) =>
-                setVolunteer({ ...volunteer, name: e.target.value })
+                setVolunteer({ ...volunteer, name: capitalize(e.target.value) })
               }
               required
             />
@@ -94,7 +118,7 @@ function VolunteerForm() {
                 placeholder="Your Phone"
                 value={volunteer.phone}
                 onChange={(e) =>
-                  setVolunteer({ ...volunteer, phone: e.target.value })
+                  setVolunteer({ ...volunteer, phone: Number(e.target.value) })
                 }
                 required
               />
@@ -104,7 +128,10 @@ function VolunteerForm() {
                 placeholder="Your Email"
                 value={volunteer.email}
                 onChange={(e) =>
-                  setVolunteer({ ...volunteer, email: e.target.value })
+                  setVolunteer({
+                    ...volunteer,
+                    email: lowercase(e.target.value),
+                  })
                 }
                 required
               />
@@ -115,7 +142,10 @@ function VolunteerForm() {
               placeholder="Your Address"
               value={volunteer.address}
               onChange={(e) =>
-                setVolunteer({ ...volunteer, address: e.target.value })
+                setVolunteer({
+                  ...volunteer,
+                  address: lowercase(e.target.value),
+                })
               }
               required
             />
@@ -142,8 +172,8 @@ function VolunteerForm() {
                 required
               >
                 <option value="">-- Select from below options</option>
-                <option value="1Week">1 Week</option>
-                <option value="1Month">1 Month</option>
+                <option value="7">1 Week</option>
+                <option value="30">1 Month</option>
                 <option value="1Month-3Month">1 Month - 3 Months</option>
                 <option value="<6Month">Less than 6 Months</option>
               </select>

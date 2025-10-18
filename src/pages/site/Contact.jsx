@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ContactHeader from "../../components/site/ContactHeader";
+import axios from "axios";
+import capitalize from "../../services/Capitalize";
+import lowercase from "../../services/lowercase";
 
 function Contact() {
   const [queryDetails, setQueryDetails] = useState({
@@ -8,10 +11,41 @@ function Contact() {
     email: "",
     query: "",
   });
+  const [submit, setSubmit] = useState(false);
 
-  function handleQuerySubmit() {
+  function handleQuerySubmit(e) {
+    e.preventDefault();
+
+    const { name, phone, email, query } = queryDetails;
+
+    if (!name || !phone || !email || !query)
+      return alert("Please provide required information");
+
+    setQueryDetails({
+      ...queryDetails,
+      name: "",
+      phone: "",
+      email: "",
+      query: "",
+    });
+
+    setSubmit((submit) => !submit);
+
     console.log(queryDetails);
   }
+
+  useEffect(() => {
+    async function submitQuery() {
+      try {
+        if (submit) {
+          await axios.post("http://localhost:8000/api/v1/query", queryDetails);
+        }
+      } catch (err) {
+        if (err) console.log("Cannot submit your query!");
+      }
+    }
+    submitQuery();
+  }, [queryDetails, submit]);
 
   return (
     <div className="contact-section">
@@ -51,7 +85,10 @@ function Contact() {
             placeholder="Your Name"
             value={queryDetails.name}
             onChange={(e) =>
-              setQueryDetails({ ...queryDetails, name: e.target.value })
+              setQueryDetails({
+                ...queryDetails,
+                name: capitalize(e.target.value),
+              })
             }
           />
           <input
@@ -60,7 +97,10 @@ function Contact() {
             placeholder="Your Email"
             value={queryDetails.email}
             onChange={(e) =>
-              setQueryDetails({ ...queryDetails, email: e.target.value })
+              setQueryDetails({
+                ...queryDetails,
+                email: lowercase(e.target.value),
+              })
             }
           />
           <input
@@ -69,7 +109,10 @@ function Contact() {
             placeholder="Your Phone"
             value={queryDetails.phone}
             onChange={(e) =>
-              setQueryDetails({ ...queryDetails, phone: e.target.value })
+              setQueryDetails({
+                ...queryDetails,
+                phone: Number(e.target.value),
+              })
             }
           />
 

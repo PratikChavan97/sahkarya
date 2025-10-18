@@ -23,6 +23,7 @@ function AdminHomeDisplay({ user }) {
     }
     getUsers();
   });
+
   return (
     <div className="home-display">
       <h2>Welcome, {user?.name}</h2>
