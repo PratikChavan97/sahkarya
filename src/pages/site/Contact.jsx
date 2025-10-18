@@ -10,6 +10,7 @@ function Contact() {
     phone: "",
     email: "",
     query: "",
+    isAnswered: false,
   });
   const [submit, setSubmit] = useState(false);
 
@@ -27,6 +28,7 @@ function Contact() {
       phone: "",
       email: "",
       query: "",
+      isAnswered: false,
     });
 
     setSubmit((submit) => !submit);
