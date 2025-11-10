@@ -1,4 +1,5 @@
 import { Table } from "react-bootstrap";
+import "./module.AdminTable.css";
 
 function AdminTable({ users }) {
   return (
@@ -19,6 +20,10 @@ function AdminTable({ users }) {
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>{user.phone}</td>
+            <td className="table-actions">
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash"></i>
+            </td>
           </tr>
         ))}
       </tbody>

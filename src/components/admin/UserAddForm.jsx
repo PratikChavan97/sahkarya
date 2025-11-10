@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./module.UserAddForm.css";
+import lowercase from "../../services/lowercase";
+import capitalize from "../../services/Capitalize";
 
 function UserAddForm() {
   const [name, setName] = useState("");
@@ -50,20 +52,21 @@ function UserAddForm() {
           type="text"
           placeholder="Your Name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setName(capitalize(e.target.value))}
         />
         <input
           type="email"
           placeholder="Your Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(lowercase(e.target.value))}
         />
         <input
           type="text"
           placeholder="Your Contact"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={(e) => setPhone(Number(e.target.value))}
         />
+
         <button onClick={(e) => handleSubmit(e)}>Submit</button>
       </form>
     </div>

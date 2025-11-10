@@ -22,16 +22,16 @@ function Contact() {
     if (!name || !phone || !email || !query)
       return alert("Please provide required information");
 
-    setQueryDetails({
-      ...queryDetails,
-      name: "",
-      phone: "",
-      email: "",
-      query: "",
-      isAnswered: false,
-    });
+    // setQueryDetails({
+    //   ...queryDetails,
+    //   name: "",
+    //   phone: "",
+    //   email: "",
+    //   query: "",
+    //   isAnswered: false,
+    // });
 
-    setSubmit((submit) => !submit);
+    setSubmit(true);
 
     console.log(queryDetails);
   }

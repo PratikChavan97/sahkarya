@@ -127,10 +127,26 @@ footer .bottom a:first-child {
   .top-footer > div {
     width: 100%;
   }
+
+  .top-footer .quick-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 380px) {
   footer {
     padding: 0.5rem;
+  }
+
+  .top-footer .quick-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

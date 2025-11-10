@@ -1,0 +1,24 @@
+table {
+  margin: 1rem 0 0 0.2rem;
+}
+
+.table-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.fa-pen {
+  background-color: cyan;
+  /* color: #fff; */
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.fa-trash {
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  color: #fff;
+}

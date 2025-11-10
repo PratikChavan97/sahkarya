@@ -61,10 +61,11 @@ function App() {
             <Route index element={<AdminHomeDisplay user={user} />} />
             <Route path="users" element={<AdminUsers />} />
             <Route path="users/add-form" element={<UserAddForm />} />
-            <Route path="volunteers" element={<AdminVolunteer />} />
             <Route path="donation" element={<AdminDonation />} />
+            <Route path="volunteers" element={<AdminVolunteer />} />
             <Route path="events" element={<AdminEvents />} />
             <Route path="gallery" element="Gallery" />
+            <Route path="queries" element="Queries" />
           </Route>
         </Route>
 

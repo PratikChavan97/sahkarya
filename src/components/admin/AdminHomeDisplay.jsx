@@ -6,6 +6,7 @@ function AdminHomeDisplay({ user }) {
   const [usersLength, setUsersLength] = useState(null);
   const [volunteersLength, setVolunteersLength] = useState(null);
   const [donersLength, setDonersLength] = useState(null);
+  console.log(setDonersLength);
 
   useEffect(() => {
     async function getUsers() {
@@ -41,6 +42,14 @@ function AdminHomeDisplay({ user }) {
 
         <div className="home-cards-card">
           <h4>Volunteer Requests: #count</h4>
+        </div>
+
+        <div className="home-cards-card">
+          <h4>Total Events: #count</h4>
+        </div>
+
+        <div className="home-cards-card">
+          <h4>Total Queries: #count</h4>
         </div>
       </div>
     </div>

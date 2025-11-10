@@ -25,14 +25,15 @@ function VolunteerForm() {
     if (!name || !phone || !email || !dob || !address || !duration)
       return alert("Please provide required information");
 
-    setVolunteer({
-      name: "",
-      phone: "",
-      email: "",
-      dob: "",
-      duration: "",
-      address: "",
-    });
+    // setVolunteer({
+    //   name: "",
+    //   phone: "",
+    //   email: "",
+    //   dob: "",
+    //   duration: "",
+    //   address: "",
+    // });
+
     setSubmit((submit) => !submit);
 
     console.log(volunteer);

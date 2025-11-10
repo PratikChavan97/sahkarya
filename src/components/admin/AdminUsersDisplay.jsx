@@ -21,6 +21,7 @@ function AdminUsersDisplay() {
     }
     getUsers();
   }, []);
+
   return (
     <div className="admin-users">
       {!users.length ? (

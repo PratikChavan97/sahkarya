@@ -17,11 +17,16 @@ function AdminNavBar() {
       <div className={x.pathname === "/dashboard/volunteers" ? "active" : ""}>
         <NavLink to="/dashboard/volunteers">Volunteers</NavLink>
       </div>
-      <div className={x.pathname === "/dashboard/gallery" ? "active" : ""}>
+
+      {/* <div className={x.pathname === "/dashboard/gallery" ? "active" : ""}>
         <NavLink to="/dashboard/gallery">Gallery</NavLink>
-      </div>
+      </div> */}
+
       <div className={x.pathname === "/dashboard/events" ? "active" : ""}>
         <NavLink to="/dashboard/events">Events</NavLink>
+      </div>
+      <div className={x.pathname === "/dashboard/queries" ? "active" : ""}>
+        <NavLink to="/dashboard/queries">Queries</NavLink>
       </div>
     </div>
   );
