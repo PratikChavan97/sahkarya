@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./module.LoginDashboard.css";
+import { baseURL } from "../../services/apiRequest";
 
 function LoginDashboard({ authenticate, setUser }) {
   const [email, setEmail] = useState("");
@@ -16,7 +17,7 @@ function LoginDashboard({ authenticate, setUser }) {
       try {
         if (submit) {
           const res = await axios.post(
-            "http://127.0.0.1:8000/api/v1/users/login",
+            `${baseURL}/users/login`,
             credentials
           );
           if (res.data.token) {

@@ -30,7 +30,15 @@ function AdminHeader({ authenticate }) {
           <i className="fa-solid fa-clock"></i> {time}
         </p>
         <p>
-          <button onClick={handleLogout}>Logout</button>
+          <button onClick={handleLogout}>
+            <i
+              className="fa-solid fa-right-from-bracket"
+              style={{
+                color: "#fff",
+              }}
+            ></i>{" "}
+            Logout
+          </button>
           {/* <div>
             <p>Profile</p>
             <p>Logout</p>

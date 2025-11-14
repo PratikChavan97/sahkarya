@@ -1,15 +1,15 @@
 .admin-nav {
   height: calc(100vh - 7rem);
   background-color: #005b9a;
-  width: 13%;
-  max-width: 14%;
+  min-width: 12%;
+  /* max-width: 14%; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.admin-nav div {
+.admin-nav > div {
   width: 100%;
   height: 100vh;
   border-bottom: 1px solid #fff;

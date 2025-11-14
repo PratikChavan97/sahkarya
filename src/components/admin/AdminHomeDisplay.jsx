@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./module.AdminHomeDisplay.css";
 import axios from "axios";
+import AdminHomeDisplayCards from "./AdminHomeDisplayCards";
 
 function AdminHomeDisplay({ user }) {
   const [usersLength, setUsersLength] = useState(null);
@@ -30,27 +31,41 @@ function AdminHomeDisplay({ user }) {
       <h2>Welcome, {user?.name}</h2>
 
       <div className="home-cards">
-        <div className="home-cards-card">
-          <h4>Total Users: {usersLength}</h4>
-        </div>
-        <div className="home-cards-card">
-          <h4>Total Donation: {donersLength}</h4>
-        </div>
-        <div className="home-cards-card">
-          <h4>Total Volunteers: {volunteersLength}</h4>
-        </div>
+        <AdminHomeDisplayCards
+          title="Total Users"
+          number={100}
+          emoji="fa-solid fa-user"
+        />
+        
+        <AdminHomeDisplayCards
+          title="Total Donation"
+          number="100000"
+          emoji="fa-solid fa-indian-rupee-sign"
+        />
 
-        <div className="home-cards-card">
-          <h4>Volunteer Requests: #count</h4>
-        </div>
+        <AdminHomeDisplayCards
+          number={5}
+          title="Total Volunteers"
+          emoji="fa-solid fa-users"
+        />
 
-        <div className="home-cards-card">
-          <h4>Total Events: #count</h4>
-        </div>
+        <AdminHomeDisplayCards
+          title="Volunteer Requests"
+          number={5}
+          emoji="fa-solid fa-user-plus"
+        />
 
-        <div className="home-cards-card">
-          <h4>Total Queries: #count</h4>
-        </div>
+        <AdminHomeDisplayCards
+          title="Total Events"
+          number={5}
+          emoji="fa-solid fa-calendar-days"
+        />
+
+        <AdminHomeDisplayCards
+          title="Total Queries"
+          number={5}
+          emoji="fa-solid fa-clipboard-question"
+        />
       </div>
     </div>
   );

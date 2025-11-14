@@ -1,2 +1,4 @@
 1) Send data from website to DB
    * Query: document creation failed
+
+- create a parent component for every nav

@@ -1,14 +1,15 @@
-import { useNavigate } from "react-router-dom";
 import AdminTable from "./AdminTable";
 
-import "./module.AdminUsersDisplay.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import "./module.AdminUsersDisplay.css";
+import CreateNewButton from "./CreateNewButton";
+import DemoTable from "../../pages/site/DemoTable";
+import AdminUsersTable from "./AdminUsersTable";
+
 function AdminUsersDisplay() {
   const [users, setUsers] = useState([]);
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     async function getUsers() {
@@ -27,19 +28,19 @@ function AdminUsersDisplay() {
       {!users.length ? (
         <>
           <h2>Sorry, No users found</h2>
-          <button onClick={() => navigate("/dashboard/users/add-form")}>
-            Add +
-          </button>
+          <CreateNewButton navigateTo="add-user" />
         </>
       ) : (
         <>
           <div className="admin-users-head">
             <h2>Users</h2>
-            <button onClick={() => navigate("/dashboard/users/add-form")}>
-              Add +
-            </button>
+            <CreateNewButton navigateTo="add-user" />
           </div>
-          <AdminTable users={users} />
+          {/* <AdminTable users={users} /> */}
+          <AdminUsersTable
+            data={users}
+            headers={["Sr. No.", "Name", "email", "phone"]}
+          />
         </>
       )}
     </div>

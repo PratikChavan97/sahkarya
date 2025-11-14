@@ -17,9 +17,19 @@ function About() {
       <ContactHeader>About</ContactHeader>
       <>
         <div className="about-btns">
-          <button onClick={() => setDisplay("us")}>About NGO</button>
+          <button
+            className={`${display === "us" ? "active" : ""}`}
+            onClick={() => setDisplay("us")}
+          >
+            About NGO
+          </button>
 
-          <button onClick={() => setDisplay("team")}>About Team</button>
+          <button
+            className={`${display === "team" ? "active" : ""}`}
+            onClick={() => setDisplay("team")}
+          >
+            About Team
+          </button>
         </div>
 
         {display === "us" ? (

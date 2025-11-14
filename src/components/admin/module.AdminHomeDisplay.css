@@ -19,7 +19,7 @@
 }
 
 .home-cards .home-cards-card {
-  border: 2px inset red;
+  /* border: 2px inset red; */
   width: 45%;
   padding: 1rem;
 }

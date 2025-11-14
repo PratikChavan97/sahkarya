@@ -1,9 +1,10 @@
-.about-btns {
+.about .about-btns {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .about button {
@@ -21,4 +22,9 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 3rem 0;
+}
+
+.about .active {
+  background-color: #000066;
+  color: #fff;
 }

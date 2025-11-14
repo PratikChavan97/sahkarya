@@ -92,8 +92,24 @@ function Footer() {
           </p>
         </div>
         <div className="conditions">
-          <Link to="/privacy-policy">Privacy Policy</Link>
-          <Link to="/terms-and-conditions">Terms & Conditions</Link>
+          <Link to="/privacy-policy">
+            <i
+              className="fa-solid fa-unlock"
+              style={{
+                color: "#fff",
+              }}
+            ></i>{" "}
+            Privacy Policy
+          </Link>
+          <Link to="/terms-and-conditions">
+            <i
+              className="fa-solid fa-file-contract"
+              style={{
+                color: "#fff",
+              }}
+            ></i>{" "}
+            Terms & Conditions
+          </Link>
         </div>
       </div>
     </footer>

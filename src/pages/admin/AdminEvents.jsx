@@ -1,9 +1,7 @@
+import AdminEventsDisplay from "../../components/admin/AdminEventsDisplay";
+
 function AdminEvents() {
-  return (
-    <div className="w-100 admin-events">
-      <h2>Events</h2>
-    </div>
-  );
+  return <AdminEventsDisplay />;
 }
 
 export default AdminEvents;

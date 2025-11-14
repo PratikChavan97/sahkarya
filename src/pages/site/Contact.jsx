@@ -3,6 +3,7 @@ import ContactHeader from "../../components/site/ContactHeader";
 import axios from "axios";
 import capitalize from "../../services/Capitalize";
 import lowercase from "../../services/lowercase";
+import { baseURL } from "../../services/apiRequest";
 
 function Contact() {
   const [queryDetails, setQueryDetails] = useState({
@@ -22,14 +23,14 @@ function Contact() {
     if (!name || !phone || !email || !query)
       return alert("Please provide required information");
 
-    // setQueryDetails({
-    //   ...queryDetails,
-    //   name: "",
-    //   phone: "",
-    //   email: "",
-    //   query: "",
-    //   isAnswered: false,
-    // });
+    setQueryDetails({
+      ...queryDetails,
+      name: "",
+      phone: "",
+      email: "",
+      query: "",
+      isAnswered: false,
+    });
 
     setSubmit(true);
 
@@ -40,7 +41,7 @@ function Contact() {
     async function submitQuery() {
       try {
         if (submit) {
-          await axios.post("http://localhost:8000/api/v1/query", queryDetails);
+          await axios.post(`${baseURL}/query`, queryDetails);
         }
       } catch (err) {
         if (err) console.log("Cannot submit your query!");

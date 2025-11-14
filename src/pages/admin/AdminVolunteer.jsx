@@ -1,12 +1,8 @@
 import AdminTable from "../../components/admin/AdminTable";
+import AdminVolunteerDisplay from "../../components/admin/AdminVolunteerDisplay";
 
 function AdminVolunteer() {
-  return (
-    <div>
-      <h2>Volunteer</h2>
-      {/* <AdminTable /> */}
-    </div>
-  );
+  return <AdminVolunteerDisplay />;
 }
 
 export default AdminVolunteer;

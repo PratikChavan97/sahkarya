@@ -23,10 +23,30 @@ import Payment from "./pages/site/Payment";
 import AdminEvents from "./pages/admin/AdminEvents";
 import LogoutDashboard from "./pages/admin/LogoutDashboard";
 import { useState } from "react";
+import AdminQuery from "./pages/admin/AdminQuery";
+import DemoTable from "./pages/site/DemoTable";
+import AdminUpdateUser from "./pages/admin/AdminUpdateUser";
+import AdminAddDoner from "./pages/admin/AdminAddDoner";
+import AdminUpdateDoner from "./pages/admin/AdminUpdateDoner";
+import AdminAddVolunteer from "./pages/admin/AdminAddVolunteer";
+import AdminUpdateVolunteer from "./pages/admin/AdminUpdateVolunteer";
+import AdminAddEvent from "./pages/admin/AdminAddEvent";
+import AdminUpdateEvent from "./pages/admin/AdminUpdateEvent";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
+
+  const tableData = [
+    { id: 1, name: "Alice", age: 25, country: "USA" },
+    { id: 2, name: "Bob", age: 30, country: "UK" },
+    { id: 3, name: "Charlie", age: 28, country: "Canada" },
+    { id: 4, name: "David", age: 35, country: "Germany" },
+    { id: 5, name: "Eva", age: 22, country: "France" },
+    { id: 6, name: "Frank", age: 40, country: "Italy" },
+    { id: 7, name: "Grace", age: 27, country: "Spain" },
+    { id: 8, name: "Hannah", age: 31, country: "Australia" },
+  ];
 
   return (
     <BrowserRouter>
@@ -41,6 +61,11 @@ function App() {
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-and-conditions" element={<TermsConditions />} />
           <Route path="payment" element={<Payment />} />
+          <Route
+            path="demo"
+            element={<DemoTable data={tableData} rowsPerPage={3} />}
+          />
+          <Route path="dashboard" element={<AdminLayout />} />
         </Route>
 
         <Route
@@ -53,21 +78,50 @@ function App() {
           }
         />
 
-        <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
+        {/* <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}> */}
+        <Route
+          path="/dashboard"
+          element={<AdminLayout authenticate={setIsAuthenticated} />}
+        >
+          <Route index element={<AdminHomeDisplay user={user} />} />
+
+          {/* Admin Users router  */}
+          <Route path="users" element={<AdminUsers />} />
+          <Route path="users/add-user" element={<UserAddForm />} />
+          <Route path="users/update/:id" element={<AdminUpdateUser />} />
+
+          {/* Admin Donation router */}
+          <Route path="donation" element={<AdminDonation />} />
+          <Route path="donation/add-doner" element={<AdminAddDoner />} />
           <Route
-            path="/dashboard"
-            element={<AdminLayout authenticate={setIsAuthenticated} />}
-          >
-            <Route index element={<AdminHomeDisplay user={user} />} />
-            <Route path="users" element={<AdminUsers />} />
-            <Route path="users/add-form" element={<UserAddForm />} />
-            <Route path="donation" element={<AdminDonation />} />
-            <Route path="volunteers" element={<AdminVolunteer />} />
-            <Route path="events" element={<AdminEvents />} />
-            <Route path="gallery" element="Gallery" />
-            <Route path="queries" element="Queries" />
-          </Route>
+            path="donation/update-doner/:id"
+            element={<AdminUpdateDoner />}
+          />
+
+          {/* Admin Volunteer router */}
+          <Route path="volunteers" element={<AdminVolunteer />} />
+          <Route
+            path="volunteers/add-volunteer"
+            element={<AdminAddVolunteer />}
+          />
+          <Route
+            path="volunteers/update-volunteer/:id"
+            element={<AdminUpdateVolunteer />}
+          />
+
+          {/* ADmin Events router */}
+          <Route path="events" element={<AdminEvents />} />
+          <Route path="events/add-event" element={<AdminAddEvent />} />
+          <Route
+            path="events/update-event/:id"
+            element={<AdminUpdateEvent />}
+          />
+
+          {/* <Route path="gallery" element="Gallery" /> */}
+
+          <Route path="queries" element={<AdminQuery />} />
         </Route>
+        {/* </Route> */}
 
         <Route path="logout" element={<LogoutDashboard />} />
 

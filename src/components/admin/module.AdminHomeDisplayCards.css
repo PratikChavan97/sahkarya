@@ -1,0 +1,45 @@
+.card-container {
+  background-color: #033e6b;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin: 0;
+  text-align: center;
+}
+
+.card-number {
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Animation for number sliding from bottom to top */
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
