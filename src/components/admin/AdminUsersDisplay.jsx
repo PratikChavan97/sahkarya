@@ -7,6 +7,7 @@ import "./module.AdminUsersDisplay.css";
 import CreateNewButton from "./CreateNewButton";
 import DemoTable from "../../pages/site/DemoTable";
 import AdminUsersTable from "./AdminUsersTable";
+import { renderAPI } from "../../services/apiRequest";
 
 function AdminUsersDisplay() {
   const [users, setUsers] = useState([]);
@@ -14,7 +15,7 @@ function AdminUsersDisplay() {
   useEffect(() => {
     async function getUsers() {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/v1/users");
+        const res = await axios.get(`${renderAPI}/users`);
         setUsers(res.data.data.users);
       } catch (err) {
         if (err) console.log("Error");

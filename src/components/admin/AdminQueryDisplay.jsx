@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import "./module.AdminQueryDisplay.css";
 import AdminQueryTable from "./AdminQueryTable";
+import { renderAPI } from "../../services/apiRequest";
 
 function AdminQueryDisplay() {
   const [queries, setQueries] = useState(null);
@@ -10,7 +11,7 @@ function AdminQueryDisplay() {
   useEffect(() => {
     async function getAllQueries() {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/v1/query");
+        const res = await axios.get(`${renderAPI}/query`);
         console.log(res.data.data.queries);
         setQueries(res.data.data.queries);
       } catch (err) {

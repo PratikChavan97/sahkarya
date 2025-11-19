@@ -11,6 +11,7 @@ function UserAddForm() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [user, setUser] = useState({});
+  const [position, setPosition] = useState("member");
 
   const [submit, setSubmit] = useState(false);
 
@@ -36,7 +37,9 @@ function UserAddForm() {
       name,
       email,
       phone,
+      isAdmin: position === "admin" ? true : false,
     };
+
     setUser(newUser);
     setSubmit(true);
     navigate("/dashboard/users");
@@ -66,6 +69,11 @@ function UserAddForm() {
           value={phone}
           onChange={(e) => setPhone(Number(e.target.value))}
         />
+        <label htmlFor="position">Position</label>
+        <select value={position} onChange={(e) => setPosition(e.target.value)}>
+          <option value="member">Member</option>
+          <option value="admin">Admin</option>
+        </select>
 
         <button onClick={(e) => handleSubmit(e)}>Submit</button>
       </form>

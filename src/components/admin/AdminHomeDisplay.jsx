@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./module.AdminHomeDisplay.css";
 import axios from "axios";
 import AdminHomeDisplayCards from "./AdminHomeDisplayCards";
+import { renderAPI } from "../../services/apiRequest";
 
 function AdminHomeDisplay({ user }) {
   const [usersLength, setUsersLength] = useState(null);
@@ -12,12 +13,10 @@ function AdminHomeDisplay({ user }) {
   useEffect(() => {
     async function getUsers() {
       try {
-        const users = await axios.get("http://127.0.0.1:8000/api/v1/users");
+        const users = await axios.get(`${renderAPI}/users`);
         setUsersLength(users.data.data.users.length);
 
-        const volunteers = await axios.get(
-          "http://127.0.0.1:8000/api/v1/volunteers"
-        );
+        const volunteers = await axios.get(`${renderAPI}/volunteers`);
         setVolunteersLength(volunteers.data.data.volunteers.length);
       } catch (err) {
         if (err) console.log("Couldn't get users");
@@ -36,7 +35,7 @@ function AdminHomeDisplay({ user }) {
           number={100}
           emoji="fa-solid fa-user"
         />
-        
+
         <AdminHomeDisplayCards
           title="Total Donation"
           number="100000"

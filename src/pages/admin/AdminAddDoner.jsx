@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { renderAPI } from "../../services/apiRequest";
 
 function AdminAddDoner() {
   const [name, setName] = useState("");
@@ -42,7 +43,7 @@ function AdminAddDoner() {
     if (submit) {
       async function submitDoner() {
         try {
-          await axios.post("http://127.0.0.1:8000/api/v1/donation", doner);
+          await axios.post(`${renderAPI}`, doner);
         } catch (err) {
           console.log("Doner cannot be created: ", err);
         }

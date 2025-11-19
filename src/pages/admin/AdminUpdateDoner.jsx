@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { renderAPI } from "../../services/apiRequest";
 
 function AdminUpdateDoner() {
   const [doner, setDoner] = useState(null);
@@ -18,9 +19,7 @@ function AdminUpdateDoner() {
   useEffect(() => {
     async function getDoner() {
       try {
-        const res = await axios.get(
-          `http://127.0.0.1:8000/api/v1/donation/${id}`
-        );
+        const res = await axios.get(`${renderAPI}/donation/${id}`);
         setDoner(res.data.data);
       } catch (err) {
         if (err) console.log("Couldn't get specific doner");
@@ -33,10 +32,7 @@ function AdminUpdateDoner() {
     if (update) {
       async function updateDoner() {
         try {
-          await axios.patch(
-            `http://127.0.0.1:8000/api/v1/donation/${id}`,
-            doner
-          );
+          await axios.put(`${renderAPI}/donation/${id}`, doner);
         } catch (err) {
           if (err) console.log("Error");
         }

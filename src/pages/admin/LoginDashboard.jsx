@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./module.LoginDashboard.css";
-import { baseURL } from "../../services/apiRequest";
+import { baseURL, renderAPI } from "../../services/apiRequest";
 
 function LoginDashboard({ authenticate, setUser }) {
   const [email, setEmail] = useState("");
@@ -16,10 +16,7 @@ function LoginDashboard({ authenticate, setUser }) {
     async function submitData() {
       try {
         if (submit) {
-          const res = await axios.post(
-            `${baseURL}/users/login`,
-            credentials
-          );
+          const res = await axios.post(`${renderAPI}/users/login`, credentials);
           if (res.data.token) {
             authenticate(true);
             setUser(res.data.user);

@@ -78,50 +78,50 @@ function App() {
           }
         />
 
-        {/* <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}> */}
-        <Route
-          path="/dashboard"
-          element={<AdminLayout authenticate={setIsAuthenticated} />}
-        >
-          <Route index element={<AdminHomeDisplay user={user} />} />
-
-          {/* Admin Users router  */}
-          <Route path="users" element={<AdminUsers />} />
-          <Route path="users/add-user" element={<UserAddForm />} />
-          <Route path="users/update/:id" element={<AdminUpdateUser />} />
-
-          {/* Admin Donation router */}
-          <Route path="donation" element={<AdminDonation />} />
-          <Route path="donation/add-doner" element={<AdminAddDoner />} />
+        <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
           <Route
-            path="donation/update-doner/:id"
-            element={<AdminUpdateDoner />}
-          />
+            path="/dashboard"
+            element={<AdminLayout authenticate={setIsAuthenticated} />}
+          >
+            <Route index element={<AdminHomeDisplay user={user} />} />
 
-          {/* Admin Volunteer router */}
-          <Route path="volunteers" element={<AdminVolunteer />} />
-          <Route
-            path="volunteers/add-volunteer"
-            element={<AdminAddVolunteer />}
-          />
-          <Route
-            path="volunteers/update-volunteer/:id"
-            element={<AdminUpdateVolunteer />}
-          />
+            {/* Admin Users router  */}
+            <Route path="users" element={<AdminUsers />} />
+            <Route path="users/add-user" element={<UserAddForm />} />
+            <Route path="users/update/:id" element={<AdminUpdateUser />} />
 
-          {/* ADmin Events router */}
-          <Route path="events" element={<AdminEvents />} />
-          <Route path="events/add-event" element={<AdminAddEvent />} />
-          <Route
-            path="events/update-event/:id"
-            element={<AdminUpdateEvent />}
-          />
+            {/* Admin Donation router */}
+            <Route path="donation" element={<AdminDonation />} />
+            <Route path="donation/add-doner" element={<AdminAddDoner />} />
+            <Route
+              path="donation/update-doner/:id"
+              element={<AdminUpdateDoner />}
+            />
 
-          {/* <Route path="gallery" element="Gallery" /> */}
+            {/* Admin Volunteer router */}
+            <Route path="volunteers" element={<AdminVolunteer />} />
+            <Route
+              path="volunteers/add-volunteer"
+              element={<AdminAddVolunteer />}
+            />
+            <Route
+              path="volunteers/update-volunteer/:id"
+              element={<AdminUpdateVolunteer />}
+            />
 
-          <Route path="queries" element={<AdminQuery />} />
+            {/* ADmin Events router */}
+            <Route path="events" element={<AdminEvents />} />
+            <Route path="events/add-event" element={<AdminAddEvent />} />
+            <Route
+              path="events/update-event/:id"
+              element={<AdminUpdateEvent />}
+            />
+
+            {/* <Route path="gallery" element="Gallery" /> */}
+
+            <Route path="queries" element={<AdminQuery />} />
+          </Route>
         </Route>
-        {/* </Route> */}
 
         <Route path="logout" element={<LogoutDashboard />} />
 

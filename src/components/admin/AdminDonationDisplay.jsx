@@ -5,6 +5,7 @@ import AdminNoDonation from "./AdminNoDonation";
 import AdminYesDonation from "./AdminYesDonation";
 
 import "./module.AdminDonationDisplay.css";
+import { renderAPI } from "../../services/apiRequest";
 
 function AdminDonationDisplay() {
   const [donation, setDonation] = useState();
@@ -12,7 +13,7 @@ function AdminDonationDisplay() {
   useEffect(() => {
     async function getDonation() {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/v1/donation");
+        const res = await axios.get(`${renderAPI}/donation`);
         setDonation(res.data.data.doners);
         console.log(res.data.data.doners);
       } catch (err) {

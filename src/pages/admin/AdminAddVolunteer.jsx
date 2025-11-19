@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { renderAPI } from "../../services/apiRequest";
 
 function AdminAddVolunteer() {
   const [name, setName] = useState("");
@@ -48,10 +49,7 @@ function AdminAddVolunteer() {
     if (submit) {
       async function submitVolunteer() {
         try {
-          await axios.post(
-            "http://127.0.0.1:8000/api/v1/volunteers",
-            volunteer
-          );
+          await axios.post(`${renderAPI}/volunteers`, volunteer);
           console.log("Volunteer created!");
         } catch (err) {
           console.log("Unable to create volunteer: ", err);
