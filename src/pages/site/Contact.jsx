@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ContactHeader from "../../components/site/ContactHeader";
 import axios from "axios";
-import capitalize from "../../services/Capitalize";
+import capitalize from "../../services/capitalize";
 import lowercase from "../../services/lowercase";
 import { baseURL } from "../../services/apiRequest";
 
