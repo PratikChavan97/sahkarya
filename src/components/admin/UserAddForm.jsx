@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./module.UserAddForm.css";
 import lowercase from "../../services/lowercase";
-import capitalize from "../../services/Capitalize";
+import capitalize from "../../services/capitalize";
 
 function UserAddForm() {
   const [name, setName] = useState("");

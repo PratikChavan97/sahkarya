@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./module.VolunteerForm.css";
 import { useState, useEffect } from "react";
-import capitalize from "../../services/Capitalize";
+import capitalize from "../../services/capitalize";
 import lowercase from "../../services/lowercase";
 import axios from "axios";
 
