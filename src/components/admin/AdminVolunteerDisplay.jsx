@@ -24,7 +24,7 @@ function AdminVolunteerDisplay() {
   return (
     <div className="admin-volunteer-display w-100">
       <>
-        {!volunteers.length ? (
+        {!volunteers?.length ? (
           <>
             <h2>No volunteers</h2>
             <CreateNewButton navigateTo="add-volunteer" />
