@@ -6,9 +6,16 @@ import Doners from "../../components/site/Doners";
 import Quote from "../../components/site/Quote";
 
 function SiteHome() {
+  const images = [
+    "assets/carousel.png",
+    "assets/carousel-2.png",
+    "assets/carousel-3.jpg",
+    "assets/carousel-4.jpg",
+  ];
+
   return (
     <div className="home">
-      <CarouselHome />
+      <CarouselHome slides={images} />
       <WelcomeOrganisation />
       <Quote name="Ralph Waldo Emerson">
         "To know even one life has breathed easier because you have lived, that

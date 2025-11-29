@@ -1,45 +1,78 @@
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-
-import OwlCarousel from "react-owl-carousel";
+import { useState, useEffect, useRef } from "react";
 
 import "./module.CarouselHome.css";
 
-function CarouselHome() {
-  const options = {
-    loop: true,
-    margin: 10,
-    nav: false,
-    autoplay: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      1000: {
-        items: 1,
-      },
-    },
+function CarouselHome({ slides = [], autoPlay = true, interval = 3000 }) {
+  const [current, setCurrent] = useState(0);
+  const slideRef = useRef(null);
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  // Auto-play
+  useEffect(() => {
+    if (!autoPlay) return;
+    const timer = setInterval(nextSlide, interval);
+    return () => clearInterval(timer);
+  }, [current, autoPlay, interval, nextSlide]);
+
+  // Touch events for swipe
+  const handleTouchStart = (e) => {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) nextSlide();
+    if (touchEndX - touchStartX > 50) prevSlide();
   };
 
   return (
-    <div className="owl-carousel-wrapper carousel-home">
-      <OwlCarousel className="owl-theme" {...options}>
-        <div className="item">
-          <img src="assets/carousel.png" alt="carousel-1" />
-        </div>
-        <div className="item">
-          <img src="assets/carousel-2.png" alt="carousel-2" />
-        </div>
-        <div className="item">
-          <img src="assets/carousel-3.jpg" alt="carousel-3" />
-        </div>
-        <div className="item last">
-          <img src="assets/carousel-4.jpg" alt="carousel-4" />
-        </div>
-      </OwlCarousel>
+    <div className="carousel">
+      <div
+        className="carousel-inner"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+        ref={slideRef}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {slides.map((img, index) => (
+          <div className="carousel-item" key={index}>
+            <img src={img} alt={`Slide ${index}`} />
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation arrows */}
+      <button className="carousel-btn left" onClick={prevSlide}>
+        ❮
+      </button>
+      <button className="carousel-btn right" onClick={nextSlide}>
+        ❯
+      </button>
+
+      {/* Dots */}
+      <div className="carousel-dots">
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${current === index ? "active" : ""}`}
+            onClick={() => setCurrent(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
